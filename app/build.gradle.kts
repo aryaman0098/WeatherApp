@@ -54,7 +54,7 @@ android {
 dependencies {
 
     //  Dependency versions
-    val hiltVersion = "2.44"
+    val hiltVersion = "2.48"
     val coroutineVersion = "1.7.3"
     val coilVersion = "2.5.0"
     val retrofitVersion = "2.9.0"
@@ -62,16 +62,18 @@ dependencies {
     val jsonConverter = "2.9.0"
     val roomVersion = "2.6.1"
     val navController = "2.7.5"
+    val hiltNavigationCompose = "1.1.0"
 
     //  Hilt
     implementation("com.google.dagger:hilt-android:$hiltVersion")
     kapt("com.google.dagger:hilt-compiler:$hiltVersion")
+    implementation ("androidx.hilt:hilt-navigation-compose:$hiltNavigationCompose")
 
     //  Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion")
 
     //  Coil
-    implementation("io.coil-kt:coil:$coilVersion")
+    implementation("io.coil-kt:coil-compose:$coilVersion")
 
     //  Retrofit
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
